@@ -2,7 +2,7 @@
 ## *CLASSIFIED: FOR YOUR EYES ONLY!*
 
 <div align="center">
-  <img src="screens/Full_Color_Ad.jpg" width="100%" />
+  <img src="screens/Full_Color_Ad.png" width="100%" />
 </div>
 
 ---
@@ -33,7 +33,7 @@ Launch the payload from your Pager menu. It instantly detects your current statu
 
 | **The Color Shell** | **Live Action** |
 |:---:|:---:|
-| <img src="screens/Choose_Your_Color.png" width="300" /> | <img src="screens/Lrg-Ani.gif" width="300" /> |
+| <img src="screens/Choose_Your_Color.png" width="300" /> | <img src="screens/Sml-Ani.gif" width="300" /> |
 | *Press **SELECT** to open the new Color Shell menu. Pick from 8 different casings to match your style or mission environment.* | *The new chassis features a realistic **Pulsing Power LED** that glows while you work. Press **START** to access the terminal.* |
 
 <br>
@@ -42,7 +42,7 @@ Launch the payload from your Pager menu. It instantly detects your current statu
 Once activated, refresh your browser. You are now undercover!
 
 <div align="center">
-  <img src="screens/ml-Ani.gif" width="100%" />
+  <img src="screens/Lrg-Ani.gif" width="100%" />
   <br>
   <i>Tactical interface in action. Perfect for field operations.</i>
 </div>
