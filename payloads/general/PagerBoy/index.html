@@ -6,11 +6,11 @@
     <meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
        
     <style>
-        /* === CORE VARIABLES (DEFAULT / DMG GRAY) === */
+        /* === CORE VARIABLES (DEFAULT / DMG GRAY - Original PagerBoy) === */
         :root {
             --bg-color: #222;
             --chassis-color: #c0c0c0;
-            --bezel-color: #555;
+            --bezel-color: #777;
             --screen-bg: #9bbc0f;
             --screen-fg: #0f380f;
             --btn-dpad: #222;
@@ -19,89 +19,114 @@
             --brand-color: #3020b0;
             --label-color: #3020b0;
             --power-led: #ff0000;
+            --power-led-label: #666;
+            --term-bg: #9bbc0f;
+            --term-fg: #0f380f;
         }
 
         /* === THEME DEFINITIONS === */
         
-        /* 1. DARK MODE (Stealth) */
+        /* 1. DARK MODE (PagerBoy Dark / Stealth) */
         [data-theme="dark"] {
             --bg-color: #000;
             --chassis-color: #1a1a1a;
             --bezel-color: #333;
             --screen-bg: #000;
             --screen-fg: #00ff00;
-            --btn-action: #008800;
-            --brand-color: #444;
-            --label-color: #444;
+            --btn-dpad: #111;
+            --btn-action: #00ff00;
+            --btn-meta: #222;
+            --brand-color: #00ff00;
+            --label-color: #00aa00;
             --power-led: #00ff00;
+            --power-led-label: #00ff00;
+            --term-bg: #000;
+            --term-fg: #00ff00;
         }
 
-        /* 2. BERRY (Fuchsia) */
+        /* 2. BERRY (Fuchsia/Pink) - GBC Berry */
         [data-theme="berry"] {
-            --bg-color: #4a001f;
+            --bg-color: #2a0015;
             --chassis-color: #c71585;
-            --bezel-color: #444;
-            --btn-dpad: #222;
-            --btn-action: #222;
-            --brand-color: #e0e0e0;
-            --label-color: #e0e0e0;
+            --bezel-color: #555;
+            --btn-dpad: #1a1a1a;
+            --btn-action: #1a1a1a;
+            --brand-color: #fff;
+            --label-color: #ffccdd;
+            --power-led-label: #fff;
+            --term-bg: #1a0010;
+            --term-fg: #ff66aa;
         }
 
-        /* 3. GRAPE (Purple) */
+        /* 3. GRAPE (Purple) - GBC Grape */
         [data-theme="grape"] {
-            --bg-color: #1a0b2e;
-            --chassis-color: #563d7c; 
-            --bezel-color: #333;
-            --btn-dpad: #222;
-            --btn-action: #222;
-            --brand-color: #ccc;
-            --label-color: #ccc;
+            --bg-color: #150a20;
+            --chassis-color: #5c3d7a;
+            --bezel-color: #444;
+            --btn-dpad: #1a1a1a;
+            --btn-action: #1a1a1a;
+            --brand-color: #e0e0e0;
+            --label-color: #ccbbdd;
+            --power-led-label: #e0e0e0;
+            --term-bg: #0a0510;
+            --term-fg: #aa88cc;
         }
 
-        /* 4. KIWI (Lime Green) */
+        /* 4. KIWI (Lime Green) - GBC Kiwi */
         [data-theme="kiwi"] {
-            --bg-color: #2e4a00;
-            --chassis-color: #8bc34a;
-            --bezel-color: #444;
-            --btn-dpad: #222;
-            --btn-action: #222;
+            --bg-color: #152a00;
+            --chassis-color: #9acd32;
+            --bezel-color: #555;
+            --btn-dpad: #1a1a1a;
+            --btn-action: #1a1a1a;
             --brand-color: #1a3e00;
             --label-color: #1a3e00;
+            --power-led-label: #1a3e00;
+            --term-bg: #0a1500;
+            --term-fg: #aaff00;
         }
 
-        /* 5. DANDELION (Yellow) */
+        /* 5. DANDELION (Yellow) - GBC Dandelion */
         [data-theme="dandelion"] {
-            --bg-color: #4a3b00;
-            --chassis-color: #ffeb3b;
-            --bezel-color: #444;
-            --btn-dpad: #222;
-            --btn-action: #222;
+            --bg-color: #2a2500;
+            --chassis-color: #fdd835;
+            --bezel-color: #555;
+            --btn-dpad: #1a1a1a;
+            --btn-action: #1a1a1a;
             --brand-color: #005580;
             --label-color: #005580;
+            --power-led-label: #005580;
+            --term-bg: #151000;
+            --term-fg: #ffdd00;
         }
 
-        /* 6. TEAL (Cyan) */
+        /* 6. TEAL (Cyan) - GBC Teal */
         [data-theme="teal"] {
-            --bg-color: #002e2e;
-            --chassis-color: #009688;
-            --bezel-color: #333;
-            --btn-dpad: #222;
-            --btn-action: #222;
+            --bg-color: #001a1a;
+            --chassis-color: #00a0a0;
+            --bezel-color: #444;
+            --btn-dpad: #1a1a1a;
+            --btn-action: #1a1a1a;
             --brand-color: #fff;
-            --label-color: #fff;
+            --label-color: #ccffff;
+            --power-led-label: #fff;
+            --term-bg: #001010;
+            --term-fg: #00ffff;
         }
 
-        /* 7. ATOMIC (Clear Purple) */
+        /* 7. ATOMIC PURPLE */
         [data-theme="atomic"] {
-            --bg-color: #151020;
-            --chassis-color: rgba(106, 90, 205, 0.85); /* Translucent effect */
-            --bezel-color: #222;
-            --btn-dpad: #111;
-            --btn-action: #111;
-            --brand-color: #fff;
-            --label-color: #e0e0e0;
-            /* Special chassis texture for atomic look */
-            --chassis-texture: repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 10px);
+            --bg-color: #0d0812;
+            --chassis-color: #7b68ee;
+            --bezel-color: #483d8b;
+            --btn-dpad: #1a1a1a;
+            --btn-action: #1a1a1a;
+            --btn-meta: #2a2035;
+            --brand-color: #e0d0f0;
+            --label-color: #c0b0d0;
+            --power-led-label: #e0d0f0;
+            --term-bg: #0a0515;
+            --term-fg: #bb99dd;
         }
 
 
@@ -121,7 +146,7 @@
             color: #ccc;
             overflow-x: hidden;
             touch-action: pan-y;
-            transition: background-color 0.5s ease;
+            transition: background-color 0.4s ease;
         }
 
         /* === LOGIN OVERLAY === */
@@ -129,7 +154,7 @@
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: var(--bg-color); z-index: 9999;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            transition: background-color 0.5s ease;
+            transition: background-color 0.4s ease;
         }
         #login img { width: 80%; max-width: 300px; margin-bottom: 20px; }
         #login input { padding: 12px; font-size: 16px; margin: 10px 0; border-radius: 4px; border: 1px solid #555; background: #111; color: white; text-align: center; }
@@ -143,65 +168,163 @@
             flex-direction: column; align-items: center;
         }
 
-        /* === MENU DIALOG === */
+        /* === MENU DIALOG (Matching Reference Design) === */
         dialog#menu-modal {
-            background: #222; color: #fff; border: 1px solid #555; padding: 20px;
-            border-radius: 8px; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.8); width: 90%; max-width: 380px; z-index: 20000;
+            background: #1a1a1a; 
+            color: #fff; 
+            border: none;
+            padding: 0;
+            border-radius: 12px; 
+            top: 50%; left: 50%; 
+            transform: translate(-50%, -50%);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.9); 
+            width: 90%; max-width: 300px; 
+            z-index: 20000;
+            overflow: hidden;
         }
-        dialog::backdrop { background: rgba(0,0,0,0.8); }
-        .modal-btn {
-            display: block; width: 100%; padding: 12px; margin-bottom: 8px;
-            background: #333; color: white; border: 1px solid #444;
-            text-align: left; cursor: pointer; font-size: 16px; font-family: 'Steelfish', sans-serif;
+        dialog::backdrop { background: rgba(0,0,0,0.85); backdrop-filter: blur(4px); }
+        
+        .modal-section {
+            padding: 20px;
         }
-        .modal-btn:hover { background: #444; }
-        .modal-btn i { vertical-align: middle; margin-right: 10px; }
+        .modal-section-title {
+            font-family: 'Steelfish', sans-serif;
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .modal-divider {
+            height: 1px;
+            background: #333;
+        }
 
-        /* THEME SELECTOR GRID */
-        .theme-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
-            margin-bottom: 20px; border-bottom: 1px solid #444; padding-bottom: 20px;
+        /* Color Shell Grid - 4x2 */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            justify-items: center;
         }
-        .theme-swatch {
-            width: 100%; aspect-ratio: 1/1; border-radius: 50%;
-            border: 2px solid #555; cursor: pointer;
-            transition: transform 0.2s;
+        .color-swatch {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            position: relative;
         }
-        .theme-swatch:hover { transform: scale(1.1); border-color: #fff; }
-        .theme-swatch[data-active="true"] { border-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
+        .color-swatch:hover {
+            transform: scale(1.1);
+        }
+        .color-swatch.active {
+            border-color: #fff;
+            box-shadow: 0 0 12px rgba(255,255,255,0.4);
+        }
+        
+        /* Swatch Colors */
+        .swatch-original { background: linear-gradient(145deg, #d0d0d0 0%, #a0a0a0 100%); border: 2px solid #888; }
+        .swatch-dark { background: linear-gradient(145deg, #222 0%, #0a0a0a 100%); border: 2px solid #444; }
+        .swatch-berry { background: linear-gradient(145deg, #d81b60 0%, #a01050 100%); }
+        .swatch-grape { background: linear-gradient(145deg, #7044a0 0%, #503080 100%); }
+        .swatch-kiwi { background: linear-gradient(145deg, #a0d840 0%, #80b030 100%); }
+        .swatch-dandelion { background: linear-gradient(145deg, #ffe040 0%, #d4b800 100%); }
+        .swatch-teal { background: linear-gradient(145deg, #00b8b8 0%, #008888 100%); }
+        .swatch-atomic { background: linear-gradient(145deg, #8b7acd 0%, #6a5aad 100%); }
+
+        /* System Menu Buttons */
+        .menu-btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            padding: 14px 16px;
+            background: #2a2a2a;
+            border: none;
+            border-radius: 6px;
+            color: #ddd;
+            font-size: 14px;
+            font-family: sans-serif;
+            cursor: pointer;
+            margin-bottom: 8px;
+            transition: background 0.2s;
+        }
+        .menu-btn:last-child { margin-bottom: 0; }
+        .menu-btn:hover { background: #333; }
+        .menu-btn i { font-size: 20px; opacity: 0.8; }
+
+        /* Close Button */
+        .modal-close {
+            display: block;
+            width: calc(100% - 40px);
+            margin: 0 auto 20px;
+            padding: 12px;
+            background: #333;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-family: 'Steelfish', sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .modal-close:hover { background: #444; }
 
         /* === CHASSIS === */
         .chassis {
             background-color: var(--chassis-color); 
-            background-image: 
-                var(--chassis-texture, none),
-                linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.05) 100%);
+            background-image: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.05) 100%);
             width: 100%; max-width: 500px;
             border-radius: 15px 15px 60px 15px;
             padding: 30px 25px 40px 25px;
             box-shadow: 
                 12px 12px 24px rgba(0,0,0,0.6),
-                inset 2px 2px 3px rgba(255,255,255,0.4),
+                inset 2px 2px 3px rgba(255,255,255,0.5),
                 inset -5px -5px 15px rgba(0,0,0,0.2);
             margin: 20px auto;
             position: relative;
             display: flex; flex-direction: column;
-            border: 1px solid rgba(0,0,0,0.2);
-            transition: background-color 0.5s ease;
+            border: 1px solid rgba(0,0,0,0.3);
+            transition: background-color 0.4s ease;
+            overflow: hidden;
+        }
+
+        /* Ensure chassis content is above any background */
+        .chassis > * {
+            position: relative;
+            z-index: 1;
         }
 
         /* POWER LED */
-        .power-led {
-            width: 8px; height: 8px; background: var(--power-led);
-            border-radius: 50%; position: absolute; top: 40%; left: 10px;
-            box-shadow: 0 0 5px var(--power-led); z-index: 5;
-            opacity: 0.8;
+        .power-led-container {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 5;
         }
-        .screen-bezel .power-led-label {
-            position: absolute; top: 45%; left: 22px; 
-            font-size: 8px; color: #888; font-family: sans-serif;
-            text-transform: uppercase; letter-spacing: 1px;
+        .power-led {
+            width: 8px; height: 8px; 
+            background: var(--power-led);
+            border-radius: 50%;
+            box-shadow: 0 0 6px var(--power-led);
+            animation: led-pulse 2s ease-in-out infinite;
+        }
+        @keyframes led-pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        .power-led-label {
+            font-size: 8px;
+            color:  var(--power-led-label);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         /* SCREEN AREA */
@@ -213,44 +336,56 @@
             width: 100%; aspect-ratio: 1/1; max-height: 50vh;
             display: flex; justify-content: center; align-items: center;
             position: relative; overflow: hidden;
-            border-top: 30px solid var(--bezel-color);
-            border-bottom: 30px solid var(--bezel-color);
-            border-left: 30px solid var(--bezel-color);
-            border-right: 30px solid var(--bezel-color);
+            border: 30px solid var(--bezel-color);
             margin-bottom: 10px;
-            transition: border-color 0.5s ease, background-color 0.5s ease;
+            transition: border-color 0.4s ease, background-color 0.4s ease;
         }
         
         #screen-wrapper { 
             position: relative; z-index: 2; width: 100%; 
             height: auto; max-height: 100%; object-fit: contain; 
-            background: var(--screen-bg); 
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.5); 
+            background: transparent; 
+            box-shadow: 0 0 25px rgba(0,0,0,0.9); 
         }
         #pager { width: 100%; height: auto; display: block; image-rendering: auto; }
+        #blur-bg-layer { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; filter: blur(25px) brightness(0.6) saturate(1.2); 
+            z-index: 1; opacity: 0.8; transform: scale(1.5); 
+        }
 
         #pager_error {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            color: var(--screen-fg); display: flex; flex-direction: column; align-items: center; justify-content: center;
+            color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
             font-family: monospace; z-index: 10;
         }
-        #screen_retry { background: var(--screen-fg); color: var(--screen-bg); border: none; padding: 5px 10px; margin-top: 10px; cursor: pointer; }
+        #screen_retry { background: #ccc; color: black; border: none; padding: 5px 10px; margin-top: 10px; cursor: pointer; }
 
         /* BRANDING */
         .brand {
-            font-family: 'Steelfish', sans-serif; font-style: italic; font-weight: bold; font-size: 32px;
-            color: var(--brand-color); text-align: center; 
-            margin-bottom: 10px; margin-top: 0;
-            text-shadow: 0px 1px 0px rgba(255,255,255,0.1);
+            font-family: 'Steelfish', sans-serif; 
+            font-style: italic; font-weight: bold; font-size: 32px;
+            color: var(--brand-color); text-align: center;
+            margin-bottom: 5px; margin-top: 5px;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.15);
             letter-spacing: 2px;
-            transition: color 0.5s ease;
+            transition: color 0.4s ease;
         }
-        .brand span { font-style: normal; color: #f00; display: inline-block; margin-left: 2px; }
+        .brand .color-text {
+            font-style: italic;
+            font-size: 26px;
+            margin-left: 4px;
+        }
+        .brand .color-text .c { color: #e60012; }
+        .brand .color-text .o { color: #ff8c00; }
+        .brand .color-text .l { color: #00a000; }
+        .brand .color-text .o2 { color: #0060c0; }
+        .brand .color-text .r { color: #8000a0; }
 
         /* CONTROLS AREA */
         .meta-buttons { 
             display: flex; justify-content: center; gap: 30px; 
-            margin-top: 10px; margin-bottom: 20px; 
+            margin-top: 15px; margin-bottom: 20px; 
         }
         
         .controls-row {
@@ -259,68 +394,100 @@
         }
 
         /* D-PAD */
-        .dpad { width: 120px; height: 120px; position: relative; }
+        .dpad { width: 130px; height: 130px; position: relative; }
         .dpad button {
             position: absolute; background-color: var(--btn-dpad); border: none; cursor: pointer;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            box-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            transition: background-color 0.4s ease;
         }
         .dpad button:active, .dpad button.pressed { box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6); }
         
-        .d-up { top: 0; left: 34%; width: 32%; height: 34%; border-radius: 4px 4px 0 0; }
-        .d-down { bottom: 0; left: 34%; width: 32%; height: 34%; border-radius: 0 0 4px 4px; }
-        .d-left { top: 34%; left: 0; width: 34%; height: 32%; border-radius: 4px 0 0 4px; }
-        .d-right { top: 34%; right: 0; width: 34%; height: 32%; border-radius: 0 4px 4px 0; }
-        .d-center { position: absolute; top: 34%; left: 34%; width: 32%; height: 32%; background: var(--btn-dpad); }
+        .d-up { top: 0; left: 33.3%; width: 33.3%; height: 33.3%; border-radius: 4px 4px 0 0; }
+        .d-down { bottom: 0; left: 33.3%; width: 33.3%; height: 33.3%; border-radius: 0 0 4px 4px; }
+        .d-left { top: 33.3%; left: 0; width: 33.3%; height: 33.3%; border-radius: 4px 0 0 4px; }
+        .d-right { top: 33.3%; right: 0; width: 33.3%; height: 33.3%; border-radius: 0 4px 4px 0; }
+        .d-center { position: absolute; top: 33.3%; left: 33.3%; width: 33.3%; height: 33.3%; background: var(--btn-dpad); transition: background-color 0.4s ease; }
         .d-center::after { content:''; display:block; width: 80%; height: 80%; border-radius: 50%; background: radial-gradient(circle, #333 0%, #111 100%); margin: 10%; opacity: 0.5; }
 
         /* A/B BUTTONS */
-        .ab-buttons { display: flex; gap: 12px; transform: rotate(-15deg); margin-right: 15px; align-items: flex-end; }
+        .ab-buttons { display: flex; gap: 15px; transform: rotate(-15deg); margin-right: 10px; align-items: flex-end; }
         .btn-wrapper { text-align: center; }
         .btn-round {
-            width: 45px; height: 45px; border-radius: 50%;
+            width: 55px; height: 55px; border-radius: 50%;
             background-color: var(--btn-action); border: none;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
             color: transparent; cursor: pointer;
+            transition: background-color 0.4s ease;
         }
         .btn-round:active, .btn-round.pressed { box-shadow: inset 2px 2px 5px rgba(0,0,0,0.6); }
-        .btn-label { font-family: sans-serif; font-weight: bold; font-size: 14px; color: var(--label-color); margin-top: 8px; letter-spacing: 1px; transition: color 0.5s ease; }
+        .btn-label { font-family: sans-serif; font-weight: bold; font-size: 16px; color: var(--label-color); margin-top: 8px; letter-spacing: 1px; transition: color 0.4s ease; }
 
         /* START/SELECT */
         .pill-wrapper { display: flex; flex-direction: column; align-items: center; transform: rotate(-15deg); }
         .pill-btn {
-            width: 60px; height: 18px; background: var(--btn-meta);
-            border: none; border-radius: 12px; box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-            cursor: pointer; margin-bottom: 4px;
+            width: 70px; height: 24px; background: var(--btn-meta);
+            border: none; border-radius: 12px; box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+            cursor: pointer; margin-bottom: 5px;
+            transition: background-color 0.4s ease;
         }
         .pill-btn:active, .pill-btn.pressed { transform: scale(0.95); box-shadow: inset 1px 1px 2px rgba(0,0,0,0.8); }
-        .pill-label { font-size: 10px; font-weight: bold; color: var(--label-color); letter-spacing: 1px; transition: color 0.5s ease; }
+        .pill-label { font-size: 12px; font-weight: bold; color: var(--label-color); letter-spacing: 1px; transition: color 0.4s ease; }
 
         /* TERMINAL SECTION */
         #extras { width: 100%; max-width: 600px; padding: 0 10px; margin-bottom: 50px; }
-        .terminal-actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 10px; }
+        
+        .terminal-actions {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+            margin-bottom: 10px;
+        }
+        
         .term-key {
-            background: #333; color: #ddd; border: none;
-            padding: 15px 0; border-radius: 8px; font-family: 'Steelfish', sans-serif;
+            background: var(--btn-meta); color: #ddd; border: none;
+            padding: 15px 0; border-radius: 20px; font-family: 'Steelfish', sans-serif;
             font-size: 18px; cursor: pointer; text-align: center;
             box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            transition: background-color 0.4s ease;
         }
         .term-key:active { background: #111; box-shadow: inset 1px 1px 3px rgba(0,0,0,0.8); }
-        #terminal-wrapper { width: 100%; height: 260px; background: #000; border-radius: 4px; padding: 5px; overflow: hidden; border: 1px solid #444; }
+
+        #terminal-wrapper {
+            width: 100%; height: 260px;
+            background: var(--term-bg); border-radius: 4px;
+            padding: 5px; overflow: hidden;
+            transition: background-color 0.4s ease;
+        }
         #terminal { width: 100%; height: 100%; }
 
         /* === MOBILE RESPONSIVE === */
         @media (max-width: 600px) {
             .chassis {
-                width: 100%; max-width: 100%; margin: 0;
+                width: 100%; max-width: 100%;
+                margin: 0;
                 border-radius: 0; box-shadow: none; border: none;
-                min-height: 100svh; padding: 40px 0 30px 0;
+                min-height: 100svh; 
+                padding: 40px 0 30px 0;
                 justify-content: flex-start;
             }
-            .screen-bezel { margin-top: 10px; border-radius: 0 0 20px 20px; border-width: 20px; border-top-width: 0; width: 100%; }
-            .brand { text-align: left; padding-left: 20px; font-size: 28px; }
+            
+            .screen-bezel { 
+                border-radius: 10px;
+                border-left: 0; border-right: 0; 
+                border: 20px solid var(--bezel-color);
+                border-width: 20px 0px 20px 0px ;
+            }
+            
+            .power-led-container { top: 15px; left: 15px; }
+            
+            .brand { text-align: center; font-size: 28px; }
+            .brand .color-text { font-size: 22px; }
+            
             .meta-buttons { margin-top: auto; margin-bottom: 30px; gap: 40px; }
-            .dpad { margin-left: 10px; }            
-            .ab-buttons { margin-right: 5px; margin-top: 30px; }
+            .controls-row { margin-bottom: 20px; padding: 0 15px; }
+            
+            .dpad { margin-left: 15px; }            
+            .ab-buttons { margin-right: 10px; margin-top: 50px; }
+            
+            .terminal-actions { grid-template-columns: repeat(4, 1fr); margin-top: 20px; }
         }
 
         /* UTILITIES */
@@ -342,28 +509,41 @@
     <div id="archiveOverlay" aria-hidden="true"><div class="spinner"></div></div>
     <div id="archiveToast"></div>
 
+    <!-- Settings Menu Modal -->
     <dialog id="menu-modal">
-        <h3 style="margin-bottom: 15px; border-bottom: 1px solid #444; padding-bottom: 10px; text-align: center; font-family:'Steelfish'; letter-spacing: 1px;">COLOR SHELL</h3>
-        
-        <div class="theme-grid">
-            <div class="theme-swatch" style="background: #c0c0c0;" onclick="setTheme('default')" title="DMG Gray"></div>
-            <div class="theme-swatch" style="background: #111;" onclick="setTheme('dark')" title="Stealth Black"></div>
-            <div class="theme-swatch" style="background: #c71585;" onclick="setTheme('berry')" title="Berry"></div>
-            <div class="theme-swatch" style="background: #563d7c;" onclick="setTheme('grape')" title="Grape"></div>
-            <div class="theme-swatch" style="background: #8bc34a;" onclick="setTheme('kiwi')" title="Kiwi"></div>
-            <div class="theme-swatch" style="background: #ffeb3b;" onclick="setTheme('dandelion')" title="Dandelion"></div>
-            <div class="theme-swatch" style="background: #009688;" onclick="setTheme('teal')" title="Teal"></div>
-            <div class="theme-swatch" style="background: #6a5acd; opacity: 0.8;" onclick="setTheme('atomic')" title="Atomic Purple"></div>
+        <div class="modal-section">
+            <div class="modal-section-title">Color Shell</div>
+            <div class="color-grid">
+                <div class="color-swatch swatch-original active" data-theme="original" title="Original"></div>
+                <div class="color-swatch swatch-dark" data-theme="dark" title="Dark"></div>
+                <div class="color-swatch swatch-berry" data-theme="berry" title="Berry"></div>
+                <div class="color-swatch swatch-grape" data-theme="grape" title="Grape"></div>
+                <div class="color-swatch swatch-kiwi" data-theme="kiwi" title="Kiwi"></div>
+                <div class="color-swatch swatch-dandelion" data-theme="dandelion" title="Dandelion"></div>
+                <div class="color-swatch swatch-teal" data-theme="teal" title="Teal"></div>
+                <div class="color-swatch swatch-atomic" data-theme="atomic" title="Atomic Purple"></div>
+            </div>
         </div>
-
-        <h3 style="margin-bottom: 15px; border-bottom: 1px solid #444; padding-bottom: 10px; text-align: center; font-family:'Steelfish'; letter-spacing: 1px;">SYSTEM</h3>
-        <button class="modal-btn" onclick="archiveLoot()"><i class="material-icons">archive</i> Archive Loot</button>
-        <button class="modal-btn" onclick="location.href='/api/loot/zip'"><i class="material-icons">download</i> Download Loot</button>
-        <button class="modal-btn" onclick="logout()"><i class="material-icons">logout</i> Log Out</button>
         
-        <div style="display: flex; justify-content: center; margin-top: 20px;">
-            <button onclick="document.getElementById('menu-modal').close()" style="padding: 10px 30px; cursor: pointer; background: #555; color: white; border: none; border-radius: 4px; font-family: 'Steelfish'; font-size: 18px;">CLOSE</button>
+        <div class="modal-divider"></div>
+        
+        <div class="modal-section">
+            <div class="modal-section-title">System</div>
+            <button class="menu-btn" onclick="archiveLoot()">
+                <i class="material-icons">archive</i>
+                <span>Archive Loot</span>
+            </button>
+            <button class="menu-btn" onclick="location.href='/api/loot/zip'">
+                <i class="material-icons">download</i>
+                <span>Download Loot</span>
+            </button>
+            <button class="menu-btn" onclick="logout()">
+                <i class="material-icons">logout</i>
+                <span>Log Out</span>
+            </button>
         </div>
+        
+        <button class="modal-close" onclick="document.getElementById('menu-modal').close()">CLOSE</button>
     </dialog>
 
     <div id="login">
@@ -380,9 +560,13 @@
     <div id="app-container">
         
         <div class="chassis">
-            <div class="screen-bezel">
+            <div class="power-led-container">
                 <div class="power-led"></div>
-                <div class="power-led-label">POWER</div>
+                <span class="power-led-label">Power</span>
+            </div>
+            
+            <div class="screen-bezel">
+                <img id="blur-bg-layer" src="">
                 <div id="screen-wrapper">
                     <img id="pager" width="480" height="222">
                     <canvas id="pager_canvas" width="480" height="222" style="display:none;"></canvas>
@@ -393,7 +577,12 @@
                 </div>
             </div>
 
-            <div class="brand">PagerBoy <span style="font-family:serif; font-style: italic; font-size: 28px; color: #e60012;">COLOR</span></div>
+            <div class="brand">
+                PagerBoy
+                <span class="color-text">
+                    <span class="c">C</span><span class="o">O</span><span class="l">L</span><span class="o2">O</span><span class="r">R</span>
+                </span>
+            </div>
 
             <div class="meta-buttons">
                 <div class="pill-wrapper">
@@ -450,42 +639,67 @@
     <script>
         let login_ok = false, keyws, screenws, shellws, server_id = '';
         const SCREEN_WIDTH = 480, SCREEN_HEIGHT = 222, FB_STRIDE = SCREEN_WIDTH * 4;
-        let loggedFrameInfo = false;
+        let currentTheme = 'original';
+
+        // Terminal color themes for each shell color
+        const terminalThemes = {
+            original: { background: '#9bbc0f', foreground: '#0f380f', cursor: '#0f380f' },
+            dark:     { background: '#000000', foreground: '#00ff00', cursor: '#00ff00' },
+            berry:    { background: '#1a0010', foreground: '#ff66aa', cursor: '#ff66aa' },
+            grape:    { background: '#0a0510', foreground: '#aa88cc', cursor: '#aa88cc' },
+            kiwi:     { background: '#0a1500', foreground: '#aaff00', cursor: '#aaff00' },
+            dandelion:{ background: '#151000', foreground: '#ffdd00', cursor: '#ffdd00' },
+            teal:     { background: '#001010', foreground: '#00ffff', cursor: '#00ffff' },
+            atomic:   { background: '#0a0515', foreground: '#bb99dd', cursor: '#bb99dd' }
+        };
 
         // Terminal Setup
         const isMobile = window.innerWidth <= 600;
         const term = new Terminal({
             cols: isMobile ? 42 : 80, 
             rows: 24, 
-            theme: { background: '#000000', foreground: '#00ff00', cursor: '#00ff00' },
+            theme: terminalThemes.original,
             cursorBlink: true
         });
 
+        // === THEME SYSTEM ===
         function setTheme(theme) {
-            // Clear existing
+            // Remove previous theme
             document.body.removeAttribute('data-theme');
             
-            // Set new if not default
-            if(theme !== 'default') {
+            // Apply new theme (if not original)
+            if (theme !== 'original') {
                 document.body.setAttribute('data-theme', theme);
             }
             
-            // Save preference
-            localStorage.setItem('pager_theme', theme);
+            // Update active swatch
+            document.querySelectorAll('.color-swatch').forEach(s => {
+                s.classList.toggle('active', s.dataset.theme === theme);
+            });
             
-            // Update Terminal Colors based on theme brightness
-            if(theme === 'dark' || theme === 'grape' || theme === 'berry' || theme === 'teal' || theme === 'atomic') {
-                 // Darker chassis -> Black Terminal
-                 term.options.theme = { background: '#000000', foreground: '#00ff00', cursor: '#00ff00' };
-                 document.getElementById('terminal-wrapper').style.background = '#000';
-            } else {
-                 // Lighter chassis -> Retro Terminal
-                 term.options.theme = { background: '#9bbc0f', foreground: '#0f380f', cursor: '#0f380f' };
-                 document.getElementById('terminal-wrapper').style.background = '#9bbc0f';
-            }
+            // Update terminal colors
+            const termTheme = terminalThemes[theme] || terminalThemes.original;
+            term.options.theme = termTheme;
+            document.getElementById('terminal-wrapper').style.background = termTheme.background;
+            
+            // Save preference
+            currentTheme = theme;
+            localStorage.setItem('pagerboy_theme', theme);
         }
 
-        function activateTerminalMode() { document.getElementById('extras').scrollIntoView({ behavior: 'smooth' }); term.focus(); }
+        // Initialize color swatch click handlers
+        function initThemeSelector() {
+            document.querySelectorAll('.color-swatch').forEach(swatch => {
+                swatch.addEventListener('click', () => {
+                    setTheme(swatch.dataset.theme);
+                });
+            });
+        }
+
+        function activateTerminalMode() { 
+            document.getElementById('extras').scrollIntoView({ behavior: 'smooth' }); 
+            term.focus(); 
+        }
 
         // === API / LOGIN LOGIC ===
         function check_login() {
@@ -500,7 +714,7 @@
                         document.body.classList.add('logged-in');
                         
                         // Apply saved theme
-                        const savedTheme = localStorage.getItem('pager_theme') || 'default';
+                        const savedTheme = localStorage.getItem('pagerboy_theme') || 'original';
                         setTheme(savedTheme);
                         
                         connect();
@@ -549,6 +763,7 @@
         }
         
         function archiveLoot() {
+            document.getElementById('menu-modal').close();
             document.getElementById("archiveOverlay").classList.add("show");
             fetch("/api/loot/archive", { method: "POST" })
                 .then(r => {
@@ -604,6 +819,7 @@
             ctx.putImageData(imgData, 0, 0);
             const url = canvas.toDataURL("image/png");
             document.getElementById('pager').src = url;
+            document.getElementById('blur-bg-layer').src = url;
         }
 
         function close() {
@@ -620,6 +836,7 @@
         // === INIT ===
         (function init() {
             check_login();
+            initThemeSelector();
             
             document.getElementById("loginbutton").onclick = login;
             document.getElementById("password").onkeyup = e => { if (e.key === 'Enter') login(); };
